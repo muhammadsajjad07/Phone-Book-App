@@ -1,1 +1,24 @@
-<p>login-page works!</p>
+<div class="container">
+    <div class="card-content col-lg-5 col-12 m-auto">
+  
+    <div class="row mx-0 content">
+      <h3 class="mb-4">ACCOUNT LOGIN</h3>
+      <div class="col-12 px-0 mb-2">
+        <label>USERNAME</label>
+        <input class="form-control" type="email" required [(ngModel)]="email" />
+      </div>
+      <div class="col-12 px-0 mb-2">
+        <label>PASSWORD</label>
+        <input class="form-control" type="password" required [(ngModel)]="password" />
+      </div>
+      <button class="btn btnLogin" (click)="Login()">Login</button>
+    </div>
+    <div class="alert alert-danger mb-0 mt-2" *ngIf="error" role="alert">
+      {{message}} 
+    </div>
+    <div class="alert alert-success mb-0 mt-2" *ngIf="success" role="alert">
+      {{message}} 
+    </div>
+  </div>
+  </div>
+  

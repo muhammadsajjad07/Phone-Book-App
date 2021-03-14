@@ -1,0 +1,30 @@
+.container{
+  height: 100vh;
+  display: flex;
+}
+label{
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  font-size: 13px;
+}
+.btnLogin {
+background: rgb(51, 51, 51);
+color: white;
+font-size: 12px;
+width: 100px;
+border-radius: 25px;
+margin: 10px 0;
+font-weight: 500;
+height: 38px;
+}
+
+.card-content {
+background: #ffffff;
+box-shadow: -3px 6px 20px #192a461f;
+border-radius: 5px;
+padding: 40px 50px;
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
+}
