@@ -1,1 +1,68 @@
-<p>phone-book works!</p>
+<div class="list-row">
+    <div class="row mx-0 padding20">
+      <div class="col-lg-5 col-12 pb-2">
+        <div class="card-content">
+          <div class="row mx-0 content">
+            <h1>Welcome {{ UserName }}</h1>
+            <div class="col-12 px-0 mb-2">
+              <label>Name</label>
+              <input
+                class="form-control"
+                type="text"
+                required
+                [(ngModel)]="name" maxlength="11"
+              />
+            </div>
+            <div class="col-12 px-0 mb-2">
+              <label>Phone No</label>
+              <input
+                class="form-control"
+                type="tel"
+                required
+                [(ngModel)]="phone"
+              />
+            </div>
+           <div class="col-12 p-0 d-flex">
+  
+            <button class="btn btnLogin" (click)="AddPhone()" [disabled]="isEdit">Add</button>
+            <button *ngIf="isEdit" class="btn btnLogin ml-1" (click)="updatePhone()">
+              Update
+            </button>
+           </div>
+           <div class="alert alert-danger col-12 mb-0 mt-2" *ngIf="error" role="alert">
+            {{message}} 
+          </div>
+        
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-12 pb-2" *ngIf="phoneList.length > 0">
+        <div class="card-content overflow-auto"  >
+          <h3>Contact List</h3>
+  
+          <table class="table PhoneBookTable">
+  
+            <th>Name</th>
+            <th>Phone No</th>
+            <th></th>
+            <tr *ngFor="let item of phoneList; let i = index">
+              <td>
+                {{ item.name }}
+              </td>
+              <td>
+                {{ item.phone }}
+              </td>
+              <td>
+                <div class="d-flex">
+                <button class="btn btn-primary tablebtn" (click)="editPhone(i, item)">Edit</button>
+                <button class="btn btn-danger ml-2 tablebtn" (click)="deletePhone(i)">Delete</button>
+              </div>
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

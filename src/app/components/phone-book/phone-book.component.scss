@@ -1,0 +1,55 @@
+.padding20{
+  
+    padding: 20px;
+}
+label{
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    font-size: 13px;
+}
+.btnLogin {
+  background: rgb(51, 51, 51);
+  color: white;
+  font-size: 12px;
+  width: 100px;
+  border-radius: 25px;
+  margin: 10px 0;
+  font-weight: 500;
+  height: 38px;
+}
+
+.card-content {
+  background: #ffffff;
+  box-shadow: -3px 6px 20px #192a461f;
+  border-radius: 5px;
+  padding: 40px 30px;}
+
+.btn:focus, .btn.focus {
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
+}
+.tablebtn{
+    width: 70px;
+    border-radius: 25px;
+    font-weight: 500;
+    height: 30px;
+    line-height: 10px;
+    font-size: 12px;
+}
+
+
+.PhoneBookTable{
+
+    th{
+        border-top: none;
+    }
+    td:nth-child(1){
+        width: 40%;
+    }
+    td:nth-child(2){
+        width: 30%;
+    }
+    td:nth-child(3){
+        width: 30%;
+        text-align: center;
+    }
+}
