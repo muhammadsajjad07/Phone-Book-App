@@ -31,7 +31,7 @@ export class LoginPageComponent implements OnInit {
 
     }
 
-    else if(this.email == "dev"  || this.password==1234){
+    else if(this.email == "dev"  && this.password==1234){
       this.message="Login Succesfully"
       this.error = null
       this.success = true
